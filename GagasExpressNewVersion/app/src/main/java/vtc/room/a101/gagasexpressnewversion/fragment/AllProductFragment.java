@@ -19,6 +19,7 @@ import vtc.room.a101.gagasexpressnewversion.module.Product;
  * A simple {@link Fragment} subclass.
  */
 public class AllProductFragment extends Fragment {
+
     public AllProductAdapter allProductAdapter;
 
     public AllProductFragment() {

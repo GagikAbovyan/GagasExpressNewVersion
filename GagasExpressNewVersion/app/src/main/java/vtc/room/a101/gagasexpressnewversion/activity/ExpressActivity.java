@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.Collections;
+
 import vtc.room.a101.gagasexpressnewversion.R;
 import vtc.room.a101.gagasexpressnewversion.adapter.AllProductAdapter;
 import vtc.room.a101.gagasexpressnewversion.constant.Constant;
@@ -60,6 +62,7 @@ public class ExpressActivity extends AppCompatActivity
         });
 
         DataProvider.initData();
+        Collections.shuffle(DataProvider.getList());
         AllProductFragment.setList(DataProvider.getList());
         //Collections.shuffle(AllProductFragment.getList());
         allProductFragment = new AllProductFragment();
@@ -155,7 +158,7 @@ public class ExpressActivity extends AppCompatActivity
     }
 
     private void loadFragment(final Fragment fragment){
-        getSupportFragmentManager().beginTransaction().add(R.id.container_for_fragment, fragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.container_for_fragment, fragment).addToBackStack(null).commit();
     }
 
 }

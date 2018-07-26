@@ -156,7 +156,7 @@ public class AllProductAdapter extends RecyclerView.Adapter<AllProductAdapter.Pr
             productHolder.favoriteButton.setColorFilter(context.getResources().getColor(R.color.colorPassive));
         }else {
             DataProvider.getList().get(position).setFavorite(true);
-            productHolder.favoriteButton.setColorFilter(context.getResources().getColor(R.color.colorPrimary));
+            productHolder.favoriteButton.setColorFilter(context.getResources().getColor(R.color.colorTextApp));
         }
     }
 
